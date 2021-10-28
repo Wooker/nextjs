@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import {getPosts} from "../lib/api";
+import pic from '../public/ne_bolei.jpg'
 
 export async function getServerSideProps(ctx){
 	let posts = await getPosts();
@@ -12,6 +13,10 @@ export async function getServerSideProps(ctx){
 		posts
     }
   }
+}
+
+const myLoader = ({ src, width, quality }) => {
+  return `https://example.com/${src}?w=${width}&q=${quality || 75}`
 }
 
 export default function Home({posts}) {
@@ -24,8 +29,15 @@ export default function Home({posts}) {
         </Head>
 
         <main>
+			<h1>Ширин</h1>
+			<Image
+				src={pic}
+			/>
+	    <p>Posts:</p>
+		<ul>
         {
           posts.map((post,index) => (
+			  <li>
             <div key={index}>
 
               <Link href={`/posts/${post.id}`}>
@@ -33,12 +45,13 @@ export default function Home({posts}) {
               </Link>
 
             </div>
+		</li>
           ))
           }
+	</ul>
         </main>
 
         <footer className={styles.footer}>
-          <p>Posts</p>
         </footer>
       </div>
 	)
