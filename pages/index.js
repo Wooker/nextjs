@@ -38,14 +38,12 @@ export default function Home({posts}) {
 		<ul>
         {
           posts.map((post,index) => (
-			  <li>
-            <div key={index}>
+		  <li key={index}>
 
               <Link href={`/posts/${post.id}`}>
               <a style={{color:'blue'}}>{post.title}</a>
               </Link>
 
-            </div>
 		</li>
           ))
           }
