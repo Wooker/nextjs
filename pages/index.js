@@ -32,6 +32,7 @@ export default function Home({posts}) {
 			<h1>Ширин</h1>
 			<Image
 				src={pic}
+				alt=''
 			/>
 	    <p>Posts:</p>
 		<ul>
