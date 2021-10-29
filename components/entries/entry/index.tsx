@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { mutate } from 'swr'
 import utilStyles from '../../../styles/utils.module.css'
 
-export function Entry({ sku, title, image, className='' }) {
+export function Entry({ sku, title, image }) {
   const [deleting, setDeleting] = useState(false)
 
   async function deleteEntry() {

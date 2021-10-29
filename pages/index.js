@@ -28,6 +28,7 @@ export default function Home() {
 				</>
 			) : (
 				<>
+				<Entries entries={prods.entries.products.edges} />
 				</>
 			)}
 		</Layout>
