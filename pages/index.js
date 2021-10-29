@@ -15,14 +15,14 @@ export default function Home() {
 			{prods.isLoading ? (
 				<>
 				<div className="d-flex justify-content-center align-items-center">
-					<div class="spinner-grow text-warning" role="status">
-						<span class="visually-hidden">Loading...</span>
+					<div className="spinner-grow text-warning" role="status">
+						<span className="visually-hidden">Loading...</span>
 					</div>
-					<div class="spinner-grow text-warning" role="status">
-						<span class="visually-hidden">Loading...</span>
+					<div className="spinner-grow text-warning" role="status">
+						<span className="visually-hidden">Loading...</span>
 					</div>
-					<div class="spinner-grow text-warning" role="status">
-						<span class="visually-hidden">Loading...</span>
+					<div className="spinner-grow text-warning" role="status">
+						<span className="visually-hidden">Loading...</span>
 					</div>
 				</div>
 				</>

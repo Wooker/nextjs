@@ -40,6 +40,7 @@ export default function Layout({children, home}) {
 			src={profile}
 			width={50}
 			height={50}
+			alt=''
 			/>
 			<a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 				<span className="fs-3">{name}</span>
@@ -57,7 +58,7 @@ export default function Layout({children, home}) {
       {!home && (
         <div classNameName={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            ← Back to home
           </Link>
         </div>
       )}
@@ -73,7 +74,7 @@ export default function Layout({children, home}) {
 		  <li className="ms-3"><a className="text-muted" href="#"></a></li>
 		  <li className="ms-3">
 			<Link href='https://api.whatsapp.com/send/?phone=77085793185' >
-				<a>+77085793185</a>
+				+77085793185
 			</Link>
 		  </li>
 		  <li className="ms-3"><a className="text-muted" href="#"></a></li>
